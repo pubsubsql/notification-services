@@ -1,4 +1,4 @@
-package main
+package ns
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ create database pubsubsql;
 create user pubsubsql identified by 'pubsubsql';
 GRANT ALL PRIVILEGES ON *.* TO 'pubsubsql'@'%' WITH GRANT OPTION;
  */
-func main() {
+func ConnectMysql() {
 	conn, err := sql.Open("mysql", "pubsubsql:pubsubsql@/pubsubsql")
 	if nil != err {
 		fmt.Println(err)
@@ -28,5 +28,4 @@ func main() {
 	}
 
 	fmt.Println(n)
-	fmt.Println("Done.")
 }
