@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
-	ns.ConnectMysql();
+	//ns.ConnectMysql();
+	ns.ConnectPostgres();
 	fmt.Println("Done.")
 }

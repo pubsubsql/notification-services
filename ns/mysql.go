@@ -7,6 +7,9 @@ import (
 )
 
 /*
+https://code.google.com/p/go-wiki/wiki/SQLDrivers
+https://github.com/go-sql-driver/mysql
+//
 create database pubsubsql;
 create user pubsubsql identified by 'pubsubsql';
 GRANT ALL PRIVILEGES ON *.* TO 'pubsubsql'@'%' WITH GRANT OPTION;
