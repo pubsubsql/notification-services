@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="..\..\scripts\CMakeLists.txt" />
+    <CustomBuild Include="..\CMakeFiles\99077878eac2b98f6fa6a2851cbb9769\mysql_fix_privilege_tables_sql.c.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\CMakeFiles\f74bb67cefe0ff60481418c59821e79f\GenFixPrivs.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\GenFixPrivs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C232EEB4-532F-4DEC-BB99-69E72D8E77D4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

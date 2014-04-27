@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="..\..\unittest\CMakeLists.txt" />
+    <CustomBuild Include="..\CMakeFiles\5aada77d646324f824446c076f2a4c5d\test-unit.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\test-unit" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C232EEB4-532F-4DEC-BB99-69E72D8E77D4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
