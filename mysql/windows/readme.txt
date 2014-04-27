@@ -10,19 +10,19 @@ cmake -G "Visual Studio 11 Win64" ..
 devenv mysql.sln /build relwithdebinfo
 
 3)
-$MYSQL_HOME\lib\plugin
-
-4)
 cd %MYSQL_SRC%
 mkdir build64
 cd build64
 cmake -G "Visual Studio 12 Win64" ..
 
-5)
+4)
 cd %MYSQL_SRC%
 mkdir build32
 cd build32
 cmake -G "Visual Studio 12" ..
+
+5)
+$MYSQL_HOME\lib\plugin
 
 
 %%
