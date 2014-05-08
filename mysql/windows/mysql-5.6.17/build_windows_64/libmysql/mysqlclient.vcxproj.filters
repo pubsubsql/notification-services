@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="mysqlclient_depends.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\libmysql\CMakeLists.txt" />
+    <CustomBuild Include="..\CMakeFiles\969c8419e525c06340fadb92bdb0afb6\mysqlclient_depends.c.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3A1E3812-50FA-4C57-831B-38A09AF025CA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5673DA24-11D4-46B7-9BCA-38E2F67207E0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
