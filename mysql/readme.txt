@@ -19,6 +19,9 @@ cd %MYSQL_HOME%\lib\plugin
 
 5)
 create database pubsubsql;
-
+install plugin example soname 'ha_example.dll';
+create table test(id int) engine = example;
+insert into test values (1);
+select * from test;
 
 %%
