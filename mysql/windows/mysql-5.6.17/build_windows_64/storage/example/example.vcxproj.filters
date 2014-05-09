@@ -4,6 +4,9 @@
     <ClCompile Include="..\..\..\storage\example\ha_example.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\storage\example\ha_pubsubsql.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\storage\example\CMakeLists.txt" />
