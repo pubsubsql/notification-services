@@ -4,6 +4,8 @@
 #include "handler.h"                     /* handler */
 #include "my_base.h"                     /* ha_rows */
 
+#include "PubsubsqlEngine.hpp"
+
 static ulong pubsubsql_queue_size_mb;
 
 static MYSQL_SYSVAR_ULONG
@@ -21,40 +23,8 @@ struct st_mysql_storage_engine pubsubsql_storage_engine =
 {	MYSQL_HANDLERTON_INTERFACE_VERSION
 };
 
-class PubsubsqlHandler : public handler {
-
-public: // factory
-
-	virtual ~PubsubsqlHandler();
-	PubsubsqlHandler(handlerton* hton, TABLE_SHARE* table);
-
-public: // iface
-
-	virtual int rnd_next(uchar *buf);
-	virtual int rnd_pos(uchar * buf, uchar *pos);
-	virtual void position(const uchar *record);
-	virtual int info(uint);
-	virtual const char * table_type() const;
-	virtual const char ** bas_ext() const;
-	virtual ulong index_flags(uint idx, uint part, bool all_parts) const;
-	virtual THR_LOCK_DATA ** store_lock(THD *thd, THR_LOCK_DATA **to, enum thr_lock_type lock_type);
-	virtual int open(const char *name, int mode, uint test_if_locked);
-	virtual int close(void);
-	virtual int rnd_init(bool scan);
-	virtual Table_flags table_flags(void) const;
-	virtual int create(const char *name, TABLE *form, HA_CREATE_INFO *info);
-
-};
-
-static handler* pubsubsql_create_handler(handlerton* hton, TABLE_SHARE* table, MEM_ROOT* mem_root) {
-	return new (mem_root)PubsubsqlHandler(hton, table);
-}
-
-static int pubsubsql_init(void* p) {
-	handlerton* pubsubsql_hton = (handlerton *)p;
-	pubsubsql_hton->create = pubsubsql_create_handler;
-	return 0;
-}
+static handler* pubsubsql_create_handler(handlerton* hton, TABLE_SHARE* table, MEM_ROOT* mem_root);
+static int pubsubsql_init(void* p);
 
 mysql_declare_plugin(pubsubsql)
 {	MYSQL_STORAGE_ENGINE_PLUGIN
