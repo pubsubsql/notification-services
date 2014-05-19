@@ -1,13 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\..\..\storage\example\ha_pubsubsql.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\storage\example\PubsubsqlEngine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\storage\example\PubsubsqlLock.cpp">
+    <ClCompile Include="..\..\..\storage\example\ha_example.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -23,19 +17,5 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{3A1E3812-50FA-4C57-831B-38A09AF025CA}</UniqueIdentifier>
     </Filter>
-    <Filter Include="include">
-      <UniqueIdentifier>{a3320759-3dd6-45de-8ed3-1edb280983e3}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\storage\example\ha_pubsubsql.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\storage\example\PubsubsqlEngine.hpp">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\storage\example\PubsubsqlLock.hpp">
-      <Filter>include</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
