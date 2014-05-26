@@ -1,4 +1,4 @@
-#include "PubsubsqlEngine.hpp"
+#include "PubsubsqlHandler.hpp"
 
 PubsubsqlHandler::~PubsubsqlHandler() {
 	DBUG_ENTER("PubsubsqlHandler::~PubsubsqlHandler");
@@ -36,14 +36,18 @@ ulong PubsubsqlHandler::index_flags(uint idx, uint part, bool all_parts) const {
 	DBUG_RETURN(flags);
 }
 
-int PubsubsqlHandler::create(const char* name, TABLE* form, HA_CREATE_INFO* info) {
+int PubsubsqlHandler::create(const char* aName, TABLE* aForm, HA_CREATE_INFO* aInfo) {
 	DBUG_ENTER("PubsubsqlHandler::create");
 	int rcode = 0;
 	DBUG_RETURN(rcode);
 }
 
-int PubsubsqlHandler::open(const char *name, int mode, uint test_if_locked) {
+int PubsubsqlHandler::open(const char* aName, int aMode, uint aTestIfLocked) {
 	DBUG_ENTER("PubsubsqlHandler::open");
+
+	if (!(mShare = PubsubsqlShare::findOrCreateShare(aName, table)))
+		DBUG_RETURN(HA_ERR_OUT_OF_MEM);
+
 	int rcode = 0;
 	DBUG_RETURN(rcode);
 }
