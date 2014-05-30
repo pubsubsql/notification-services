@@ -7,4 +7,11 @@
 #include "PubsubsqlHandler.hpp"
 #include "PubsubsqlShare.hpp"
 
+class PubsubsqlVariables {
 
+public: // iface
+
+	static ulong getRows();
+	static ulong getQueueSizeMB();
+
+};

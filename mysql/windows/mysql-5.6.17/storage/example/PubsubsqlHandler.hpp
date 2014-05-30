@@ -15,11 +15,15 @@ private: // fields
 
 	THR_LOCK_DATA mLock;		/* MySQL lock */
 	PubsubsqlShare* mShare;		/* Shared lock info */
+	ulong mReturnedData;
 
-public: // factory
+public: // aux
 
-	virtual ~PubsubsqlHandler();
-	PubsubsqlHandler(handlerton* aHton, TABLE_SHARE* aTable);
+	// These functions used to get/update status of the handler.
+	// Needed to enable concurrent inserts.
+	void getStatus();
+	void updateStatus();
+	my_bool checkStatus();
 
 public: // iface
 
@@ -32,12 +36,22 @@ public: // iface
 	virtual int open(const char* aName, int aMode, uint aTestIfLocked);
 	virtual int close();
 
-	virtual int rnd_next(uchar* aBuf);
-	virtual int rnd_pos(uchar* aBuf, uchar* aPos);
-	virtual void position(const uchar* aRecord);
-	virtual int info(uint);
 	virtual THR_LOCK_DATA** store_lock(THD* aThd, THR_LOCK_DATA** aTo, enum thr_lock_type aLockType);
+
 	virtual int rnd_init(bool aScan);
+	virtual int rnd_next(uchar* aBuffer);
+	virtual void position(const uchar* aRecord);
+	virtual int rnd_pos(uchar* aBuffer, uchar* aPosition);
+	virtual int info(uint aFlag);
+
+private: // aux
+
+	void fillRecord(TABLE* aTable, unsigned char* aBuffer, ulong aRowNum);
+
+public: // factory
+
+	virtual ~PubsubsqlHandler();
+	PubsubsqlHandler(handlerton* aPubsubsqlHandlerton, TABLE_SHARE* aTable);
 
 };
 

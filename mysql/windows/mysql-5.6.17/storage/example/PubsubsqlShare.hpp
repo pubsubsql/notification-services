@@ -19,10 +19,14 @@ public: // fields
 
 public: // iface
 
-	static PubsubsqlShare* findOrCreateShare(const char* aTableName, TABLE* aTable);
-
-	static void onInit();
-	static void onDeinit();
+	static PubsubsqlShare* findOrCreateShare
+	(	const char* aTableName
+	,	TABLE* aTable
+	);
+	static int deleteShare(PubsubsqlShare* aShare);
+	//
+	static void onInit(void* aHandlertonPointer);
+	static void onDeinit(void* aHandlertonPointer);
 
 public: // factory
 
