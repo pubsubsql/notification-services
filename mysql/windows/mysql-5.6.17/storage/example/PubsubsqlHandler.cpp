@@ -1,5 +1,7 @@
 #include "PubsubsqlHandler.hpp"
 #include "ha_pubsubsql.h"
+#include "table.h"
+#include "field.h"
 
 //============================================================================
 // Three functions below are needed to enable
@@ -174,7 +176,21 @@ void PubsubsqlHandler::fillRecord
 ,	unsigned char* aBuffer
 ,	ulong aRowNum
 ) {
-	// void
+	my_bitmap_map* oldMap = tmp_use_all_columns(aTable, aTable->write_set);
+	for (uint i = 0; i < aTable->s->fields; i++) {
+		Field* field = aTable->field[i];
+		my_ptrdiff_t offset = (my_ptrdiff_t) (aBuffer - aTable->record[0]);
+		if (field->type() == MYSQL_TYPE_VARCHAR) {
+			field->move_field_offset(offset);
+			field->set_notnull();
+			const char* strData = "Hello PubSubSQL!";
+			uint strDataSize = (uint) strlen(strData);
+			field->store(strData, strDataSize, system_charset_info);
+			field->move_field_offset(-offset);
+			break; // fill only first varchar column
+		}
+	}
+	tmp_restore_column_map(aTable->write_set, oldMap);
 }
 
 //============================================================================
