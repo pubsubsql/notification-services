@@ -44,6 +44,9 @@ public: // iface
 	virtual int rnd_pos(uchar* aBuffer, uchar* aPosition);
 	virtual int info(uint aFlag);
 
+	virtual int write_row(uchar* aBuffer);
+	virtual int delete_row(const uchar* aBuffer);
+
 private: // aux
 
 	void fillRecord(TABLE* aTable, unsigned char* aBuffer, ulong aRowNum);

@@ -1,5 +1,28 @@
 #include "PubsubsqlShare.hpp"
 #include "PubsubsqlHandler.hpp"
+#include "ha_pubsubsql.h"
+
+ulong PubsubsqlShare::getRowCount() const {
+	return mRowCount;
+}
+
+int PubsubsqlShare::insertRow(uchar* aBuffer) {
+	mysql_mutex_lock(&mMutex);
+	mRowCount++;
+	mysql_mutex_unlock(&mMutex);
+	return 0;
+}
+
+int PubsubsqlShare::deleteRow(const uchar* aBuffer) {
+	mysql_mutex_lock(&mMutex);
+	if (mRowCount > 0) {
+		mRowCount--;
+	}
+	mysql_mutex_unlock(&mMutex);
+	return 0;
+}
+
+//============================================================================
 
 mysql_mutex_t gPubsubsqlMutex;
 static HASH gPubsubsqlOpenTables;
@@ -74,6 +97,7 @@ PubsubsqlShare* PubsubsqlShare::findOrCreateShare
 		share->mTableNameLength = length;
 		share->mTableName = tmpName;
 		strmov(share->mTableName, aTableName);
+		share->mRowCount = PubsubsqlVariables::getRows();
 		//
 		if (my_hash_insert(&gPubsubsqlOpenTables, (uchar*)share)) {
 			mysql_mutex_unlock(&gPubsubsqlMutex);

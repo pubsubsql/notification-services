@@ -17,7 +17,15 @@ public: // fields
 	mysql_mutex_t mMutex;
 	THR_LOCK mLock;
 
+private: // aux
+
+	ulong mRowCount;
+
 public: // iface
+
+	ulong getRowCount() const;
+	int insertRow(uchar* aBuffer);
+	int deleteRow(const uchar* aBuffer);
 
 	static PubsubsqlShare* findOrCreateShare
 	(	const char* aTableName

@@ -65,7 +65,12 @@ const char** PubsubsqlHandler::bas_ext() const {
 
 PubsubsqlHandler::Table_flags PubsubsqlHandler::table_flags() const {
 	DBUG_ENTER("PubsubsqlHandler::table_flags");
-	PubsubsqlHandler::Table_flags flags = (HA_NO_TRANSACTIONS | HA_STATS_RECORDS_IS_EXACT | HA_REC_NOT_IN_SEQ);
+	PubsubsqlHandler::Table_flags flags =
+	(	HA_NO_TRANSACTIONS
+	|	HA_STATS_RECORDS_IS_EXACT
+	|	HA_REC_NOT_IN_SEQ
+	|	HA_NO_BLOBS
+	);
 	DBUG_RETURN(flags);
 }
 
@@ -143,7 +148,7 @@ int PubsubsqlHandler::rnd_init(bool aScan) {
 }
 
 int PubsubsqlHandler::rnd_next(uchar* aBuffer) {
-	if (mReturnedData >= PubsubsqlVariables::getRows()) {
+	if (mReturnedData >= mShare->getRowCount()) {
 		return HA_ERR_END_OF_FILE;
 	}
 	//
@@ -167,6 +172,16 @@ int PubsubsqlHandler::info(uint aFlag) {
 		stats.records = PubsubsqlVariables::getRows();
 	}
 	return 0;
+}
+
+//============================================================================
+
+int PubsubsqlHandler::write_row(uchar* aBuffer) {
+	return mShare->insertRow(aBuffer);
+}
+
+int PubsubsqlHandler::delete_row(const uchar* aBuffer) {
+	return mShare->deleteRow(aBuffer);
 }
 
 //============================================================================
