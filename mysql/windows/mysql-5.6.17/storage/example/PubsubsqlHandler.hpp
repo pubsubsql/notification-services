@@ -49,6 +49,7 @@ public: // iface
 
 private: // aux
 
+	void setReturnedDataMax();
 	void fillRecord(TABLE* aTable, unsigned char* aBuffer, ulong aRowNum);
 
 public: // factory

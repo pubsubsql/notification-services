@@ -169,7 +169,7 @@ int PubsubsqlHandler::rnd_pos(uchar* aBuffer, uchar* aPosition) {
 
 int PubsubsqlHandler::info(uint aFlag) {
 	if (aFlag & HA_STATUS_VARIABLE) {
-		stats.records = PubsubsqlVariables::getRows();
+		stats.records = mShare->getRowCount();
 	}
 	return 0;
 }
@@ -181,10 +181,16 @@ int PubsubsqlHandler::write_row(uchar* aBuffer) {
 }
 
 int PubsubsqlHandler::delete_row(const uchar* aBuffer) {
+	setReturnedDataMax();
 	return mShare->deleteRow(aBuffer);
 }
 
 //============================================================================
+
+void PubsubsqlHandler::setReturnedDataMax() {
+	mReturnedData = 0;
+	mReturnedData--;
+}
 
 void PubsubsqlHandler::fillRecord
 (	TABLE* aTable
