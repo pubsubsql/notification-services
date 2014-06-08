@@ -8,6 +8,7 @@
 #include "my_base.h"                     /* ha_rows */
 
 #include "PubsubsqlShare.hpp"
+#include "PubsubsqlListNode.hpp"
 
 class PubsubsqlHandler : public handler {
 
@@ -19,7 +20,7 @@ private: // fields
 
 	THR_LOCK_DATA mLock;		/* MySQL lock */
 	PubsubsqlShare* mShare;		/* Shared lock info */
-	ulong mReturnedData;
+	PubsubsqlListNodeSptr mCurrentRow;
 
 public: // aux
 
@@ -53,8 +54,7 @@ public: // iface
 
 private: // aux
 
-	void setReturnedDataMax();
-	void fillRecord(TABLE* aTable, unsigned char* aBuffer, ulong aRowNum);
+	void fillRecord(TABLE* aTable, unsigned char* aBuffer);
 
 public: // factory
 

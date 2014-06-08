@@ -19,10 +19,10 @@ public: // fields
 	mysql_mutex_t mMutex;
 	THR_LOCK mLock;
 
-private: // aux
+public: // aux
 
 	ulong mRowCount;
-	PubsubsqlList mRowList;
+	PubsubsqlList mRows;
 
 public: // iface
 

@@ -143,28 +143,27 @@ THR_LOCK_DATA ** PubsubsqlHandler::store_lock
 //============================================================================
 
 int PubsubsqlHandler::rnd_init(bool aScan) {
-	mReturnedData = 0;
+	mCurrentRow = mShare->mRows.peek();
 	return 0;
 }
 
 int PubsubsqlHandler::rnd_next(uchar* aBuffer) {
-	if (mReturnedData >= mShare->getRowCount()) {
-		setReturnedDataMax();
+	if (mCurrentRow) {
+		fillRecord(table, aBuffer);
+		mCurrentRow = mCurrentRow->getNext();
+		return 0;
+	}
+	else {
 		return HA_ERR_END_OF_FILE;
 	}
-	//
-	fillRecord(table, aBuffer, ++mReturnedData);
-	return 0;
 }
 
 void PubsubsqlHandler::position(const uchar* aRecord) {
-	*(ulong*)ref = mReturnedData;
+	*(ulong*)ref = 0;
 }
 
 int PubsubsqlHandler::rnd_pos(uchar* aBuffer, uchar* aPosition) {
-	ulong rowNum = 0;
-	memcpy(&rowNum, aPosition, sizeof(rowNum));
-	fillRecord(table, aBuffer, rowNum);
+	fillRecord(table, aBuffer);
 	return 0;
 }
 
@@ -178,26 +177,20 @@ int PubsubsqlHandler::info(uint aFlag) {
 //============================================================================
 
 int PubsubsqlHandler::write_row(uchar* aBuffer) {
-	//setReturnedDataMax();
+	mCurrentRow.reset();
 	return mShare->insertRow(aBuffer);
 }
 
 int PubsubsqlHandler::delete_row(const uchar* aBuffer) {
-	setReturnedDataMax();
+	mCurrentRow.reset();
 	return mShare->deleteRow(aBuffer);
 }
 
 //============================================================================
 
-void PubsubsqlHandler::setReturnedDataMax() {
-	mReturnedData = 0;
-	mReturnedData--;
-}
-
 void PubsubsqlHandler::fillRecord
 (	TABLE* aTable
 ,	unsigned char* aBuffer
-,	ulong aRowNum
 ) {
 	my_bitmap_map* oldMap = tmp_use_all_columns(aTable, aTable->write_set);
 	for (uint i = 0; i < aTable->s->fields; i++) {
