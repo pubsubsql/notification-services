@@ -8,6 +8,7 @@ ulong PubsubsqlShare::getRowCount() const {
 
 int PubsubsqlShare::insertRow(uchar* aBuffer) {
 	mysql_mutex_lock(&mMutex);
+	mRowList.push();
 	mRowCount++;
 	mysql_mutex_unlock(&mMutex);
 	return 0;
@@ -15,6 +16,7 @@ int PubsubsqlShare::insertRow(uchar* aBuffer) {
 
 int PubsubsqlShare::deleteRow(const uchar* aBuffer) {
 	mysql_mutex_lock(&mMutex);
+	mRowList.pop();
 	if (mRowCount > 0) {
 		mRowCount--;
 	}

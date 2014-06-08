@@ -1,22 +1,33 @@
 #ifndef PUBSUBSQL_LIST_NODE_HPP
 #define PUBSUBSQL_LIST_NODE_HPP
 
-#include <cstdint>
+#include <memory>
+
+class PubsubsqlListNode;
+typedef std::shared_ptr<PubsubsqlListNode> PubsubsqlListNodeSptr;
+
+//----------------------------------------------------------------------------
+
+PubsubsqlListNode* newPubsubsqlListNode();
+void deletePubsubsqlListNode(PubsubsqlListNode* aNode);
+
+//----------------------------------------------------------------------------
 
 class PubsubsqlListNode {
 
 private: // fields
 
-	uint64_t mSizeB;
-	PubsubsqlListNode* mNext;
+	size_t mSizeB;
+	PubsubsqlListNodeSptr mNext;
 
 public: // iface
 
-	inline uint64_t getSizeB() const { return mSizeB; }
-	inline PubsubsqlListNode* getNext() { return mNext; }
+	inline size_t getSizeB() const { return mSizeB; }
+	inline PubsubsqlListNodeSptr getNext() { return mNext; }
+	inline void setNext(PubsubsqlListNodeSptr aNext) { mNext = aNext; }
 
 	inline void* getPayload() { return ((uint8_t*)this) + sizeof(PubsubsqlListNode); }
-	inline uint64_t getPayloadSizeB() const { mSizeB - sizeof(PubsubsqlListNode); }
+	inline size_t getPayloadSizeB() const { mSizeB - sizeof(PubsubsqlListNode); }
 
 public: // factory
 

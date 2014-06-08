@@ -7,6 +7,8 @@
 #include "handler.h"                     /* handler */
 #include "my_base.h"                     /* ha_rows */
 
+#include "PubsubsqlList.hpp"
+
 class PubsubsqlShare {
 
 public: // fields
@@ -20,6 +22,7 @@ public: // fields
 private: // aux
 
 	ulong mRowCount;
+	PubsubsqlList mRowList;
 
 public: // iface
 
