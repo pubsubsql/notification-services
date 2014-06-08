@@ -97,7 +97,7 @@ PubsubsqlShare* PubsubsqlShare::findOrCreateShare
 		share->mTableNameLength = length;
 		share->mTableName = tmpName;
 		strmov(share->mTableName, aTableName);
-		share->mRowCount = PubsubsqlVariables::getRows();
+		share->mRowCount = 0;
 		//
 		if (my_hash_insert(&gPubsubsqlOpenTables, (uchar*)share)) {
 			mysql_mutex_unlock(&gPubsubsqlMutex);

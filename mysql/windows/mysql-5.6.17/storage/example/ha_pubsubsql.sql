@@ -8,4 +8,3 @@ select * from test;
 delete from test;
 select * from test;
 
-

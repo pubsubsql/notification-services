@@ -149,6 +149,7 @@ int PubsubsqlHandler::rnd_init(bool aScan) {
 
 int PubsubsqlHandler::rnd_next(uchar* aBuffer) {
 	if (mReturnedData >= mShare->getRowCount()) {
+		setReturnedDataMax();
 		return HA_ERR_END_OF_FILE;
 	}
 	//
@@ -169,7 +170,7 @@ int PubsubsqlHandler::rnd_pos(uchar* aBuffer, uchar* aPosition) {
 
 int PubsubsqlHandler::info(uint aFlag) {
 	if (aFlag & HA_STATUS_VARIABLE) {
-		stats.records = mShare->getRowCount();
+		stats.records = DEFAULT_STATS_RECORDS;
 	}
 	return 0;
 }
@@ -177,6 +178,7 @@ int PubsubsqlHandler::info(uint aFlag) {
 //============================================================================
 
 int PubsubsqlHandler::write_row(uchar* aBuffer) {
+	//setReturnedDataMax();
 	return mShare->insertRow(aBuffer);
 }
 
@@ -225,7 +227,8 @@ PubsubsqlHandler::PubsubsqlHandler
 (	handlerton* aPubsubsqlHandlerton
 ,	TABLE_SHARE* aTableShare
 )
-: handler(aPubsubsqlHandlerton, aTableShare)
+:	handler(aPubsubsqlHandlerton, aTableShare)
+,	DEFAULT_STATS_RECORDS(10)
 {
 	DBUG_ENTER("PubsubsqlHandler::PubsubsqlHandler");
 	DBUG_VOID_RETURN;

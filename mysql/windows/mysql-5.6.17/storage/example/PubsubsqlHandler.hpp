@@ -11,6 +11,10 @@
 
 class PubsubsqlHandler : public handler {
 
+private: // const
+
+	const ulong DEFAULT_STATS_RECORDS;
+
 private: // fields
 
 	THR_LOCK_DATA mLock;		/* MySQL lock */

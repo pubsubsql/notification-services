@@ -13,7 +13,7 @@ ulong PubsubsqlVariables::getQueueSizeMB() { return pubsubsql_queue_size_mb; }
 static MYSQL_SYSVAR_ULONG
 (	rows, pubsubsql_rows, 0
 ,	"Number of rows in the PubSubSQL engine tables"
-,	NULL, NULL, 1, 0, 0, 0
+,	NULL, NULL, 3, 0, 0, 0
 );
 
 static MYSQL_SYSVAR_ULONG
