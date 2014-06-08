@@ -21,12 +21,10 @@ public: // fields
 
 public: // aux
 
-	ulong mRowCount;
 	PubsubsqlList mRows;
 
 public: // iface
 
-	ulong getRowCount() const;
 	int insertRow(uchar* aBuffer);
 	int deleteRow(const uchar* aBuffer);
 

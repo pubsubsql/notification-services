@@ -6,6 +6,10 @@
 #include "handler.h"                     /* handler */
 #include "my_base.h"                     /* ha_rows */
 
+size_t PubsubsqlList::getCount() const {
+	return mCount;
+}
+
 void PubsubsqlList::push() {
 	PubsubsqlListNodeSptr newTail =
 		PubsubsqlListNodeSptr(newPubsubsqlListNode(), deletePubsubsqlListNode);
@@ -18,6 +22,7 @@ void PubsubsqlList::push() {
 			mHead = newTail;
 		}
 		mTail = newTail;
+		mCount++;
 	}
 }
 
@@ -33,6 +38,9 @@ PubsubsqlListNodeSptr PubsubsqlList::pop() {
 			mTail = nullptr;
 		}
 		oldHead->setNext(nullptr);
+		if (mCount > 0) {
+			mCount--;
+		}
 	}
 	return oldHead;
 }
@@ -48,6 +56,7 @@ PubsubsqlList::~PubsubsqlList() {
 PubsubsqlList::PubsubsqlList()
 :	mHead(nullptr)
 ,	mTail(nullptr)
+,	mCount(0)
 {
 	// void
 }
