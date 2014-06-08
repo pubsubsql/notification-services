@@ -342,11 +342,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClInclude Include="..\..\..\storage\example\ha_pubsubsql.h" />
     <ClInclude Include="..\..\..\storage\example\PubsubsqlHandler.hpp" />
+    <ClInclude Include="..\..\..\storage\example\PubsubsqlList.hpp" />
+    <ClInclude Include="..\..\..\storage\example\PubsubsqlListNode.hpp" />
     <ClInclude Include="..\..\..\storage\example\PubsubsqlShare.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\storage\example\ha_pubsubsql.cc" />
     <ClCompile Include="..\..\..\storage\example\PubsubsqlHandler.cpp" />
+    <ClCompile Include="..\..\..\storage\example\PubsubsqlList.cpp" />
+    <ClCompile Include="..\..\..\storage\example\PubsubsqlListNode.cpp" />
     <ClCompile Include="..\..\..\storage\example\PubsubsqlShare.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

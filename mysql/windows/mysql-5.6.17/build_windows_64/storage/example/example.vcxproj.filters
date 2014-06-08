@@ -21,6 +21,12 @@
     <ClInclude Include="..\..\..\storage\example\PubsubsqlShare.hpp">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\storage\example\PubsubsqlList.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\storage\example\PubsubsqlListNode.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\storage\example\ha_pubsubsql.cc">
@@ -30,6 +36,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\storage\example\PubsubsqlShare.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\storage\example\PubsubsqlList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\storage\example\PubsubsqlListNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
