@@ -149,7 +149,7 @@ int PubsubsqlHandler::rnd_init(bool aScan) {
 
 int PubsubsqlHandler::rnd_next(uchar* aBuffer) {
 	if (mCurrentRow) {
-		fillRecord(table, aBuffer);
+		selectRecord(table, aBuffer);
 		mCurrentRow = mCurrentRow->getNext();
 		return 0;
 	}
@@ -163,7 +163,7 @@ void PubsubsqlHandler::position(const uchar* aRecord) {
 }
 
 int PubsubsqlHandler::rnd_pos(uchar* aBuffer, uchar* aPosition) {
-	fillRecord(table, aBuffer);
+	selectRecord(table, aBuffer);
 	return 0;
 }
 
@@ -178,38 +178,45 @@ int PubsubsqlHandler::info(uint aFlag) {
 
 int PubsubsqlHandler::write_row(uchar* aBuffer) {
 	mCurrentRow.reset();
-	//return mShare->insertRow(aBuffer);
-	return insertRow(table, aBuffer);
+	return insertRecord(table, aBuffer);
 }
 
 int PubsubsqlHandler::delete_row(const uchar* aBuffer) {
 	mCurrentRow.reset();
-	return mShare->deleteRow(aBuffer);
+	return deleteRecord(table, aBuffer);
 }
 
 //============================================================================
 
-void PubsubsqlHandler::fillRecord(TABLE* aTable, unsigned char* aBuffer) {
+void PubsubsqlHandler::selectRecord(TABLE* aTable, uchar* aBuffer) {
+	my_ptrdiff_t offset = (my_ptrdiff_t)(aBuffer - aTable->record[0]);
 	my_bitmap_map* oldMap = dbug_tmp_use_all_columns(aTable, aTable->write_set);
 	for (uint i = 0; i < aTable->s->fields; i++) {
 		Field* field = aTable->field[i];
-		my_ptrdiff_t offset = (my_ptrdiff_t) (aBuffer - aTable->record[0]);
 		if (field->type() == MYSQL_TYPE_VARCHAR) {
 			field->move_field_offset(offset);
 			field->set_notnull();
-			const char* strData = "Hello PubSubSQL!";
-			uint strDataSize = (uint) strlen(strData);
-			field->store(strData, strDataSize, system_charset_info);
+			//
+			const char* str = "";
+			uint strLen = 0;
+			if (mCurrentRow) {
+				str = mCurrentRow->c_str();
+				strLen = (uint)mCurrentRow->c_str_len();
+			}
+			//
+			field->store(str, strLen, system_charset_info);
 			field->move_field_offset(-offset);
-			break; // fill only first varchar column
+			break; // select first varchar column only
 		}
 	}
 	dbug_tmp_restore_column_map(aTable->write_set, oldMap);
 }
 
-int PubsubsqlHandler::insertRow(TABLE* aTable, uchar* aBuffer) {
+//----------------------------------------------------------------------------
+
+int PubsubsqlHandler::insertRecord(TABLE* aTable, uchar* aBuffer) {
 	char tmpBuffer[1024];
-	String tmpString(tmpBuffer, sizeof(tmpBuffer), &my_charset_bin);
+	String tmpString(tmpBuffer, sizeof(tmpBuffer), system_charset_info);
 	//
 	my_ptrdiff_t offset = (my_ptrdiff_t)(aBuffer - aTable->record[0]);
 	my_bitmap_map* oldMap = dbug_tmp_use_all_columns(aTable, aTable->read_set);
@@ -232,6 +239,12 @@ int PubsubsqlHandler::insertRow(TABLE* aTable, uchar* aBuffer) {
 	dbug_tmp_restore_column_map(aTable->read_set, oldMap);
 	//
 	return 0;
+}
+
+//----------------------------------------------------------------------------
+
+int PubsubsqlHandler::deleteRecord(TABLE* aTable, const uchar* aBuffer) {
+	return mShare->deleteRow(aBuffer);
 }
 
 //============================================================================

@@ -54,8 +54,9 @@ public: // iface
 
 private: // aux
 
-	void fillRecord(TABLE* aTable, unsigned char* aBuffer);
-	int insertRow(TABLE* aTable, uchar* aBuffer);
+	void selectRecord(TABLE* aTable, uchar* aBuffer);
+	int insertRecord(TABLE* aTable, uchar* aBuffer);
+	int deleteRecord(TABLE* aTable, const uchar* aBuffer);
 
 public: // factory
 
