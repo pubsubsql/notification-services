@@ -55,6 +55,7 @@ public: // iface
 private: // aux
 
 	void fillRecord(TABLE* aTable, unsigned char* aBuffer);
+	int insertRow(TABLE* aTable, uchar* aBuffer);
 
 public: // factory
 

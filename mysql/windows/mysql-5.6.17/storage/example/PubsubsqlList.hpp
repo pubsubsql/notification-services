@@ -16,7 +16,7 @@ private: // fields
 public: // iface
 
 	size_t getCount() const;
-	void push();
+	void push(const char* aString);
 	PubsubsqlListNodeSptr pop();
 	PubsubsqlListNodeSptr peek();
 

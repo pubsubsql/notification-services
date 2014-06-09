@@ -178,7 +178,8 @@ int PubsubsqlHandler::info(uint aFlag) {
 
 int PubsubsqlHandler::write_row(uchar* aBuffer) {
 	mCurrentRow.reset();
-	return mShare->insertRow(aBuffer);
+	//return mShare->insertRow(aBuffer);
+	return insertRow(table, aBuffer);
 }
 
 int PubsubsqlHandler::delete_row(const uchar* aBuffer) {
@@ -188,11 +189,8 @@ int PubsubsqlHandler::delete_row(const uchar* aBuffer) {
 
 //============================================================================
 
-void PubsubsqlHandler::fillRecord
-(	TABLE* aTable
-,	unsigned char* aBuffer
-) {
-	my_bitmap_map* oldMap = tmp_use_all_columns(aTable, aTable->write_set);
+void PubsubsqlHandler::fillRecord(TABLE* aTable, unsigned char* aBuffer) {
+	my_bitmap_map* oldMap = dbug_tmp_use_all_columns(aTable, aTable->write_set);
 	for (uint i = 0; i < aTable->s->fields; i++) {
 		Field* field = aTable->field[i];
 		my_ptrdiff_t offset = (my_ptrdiff_t) (aBuffer - aTable->record[0]);
@@ -206,7 +204,34 @@ void PubsubsqlHandler::fillRecord
 			break; // fill only first varchar column
 		}
 	}
-	tmp_restore_column_map(aTable->write_set, oldMap);
+	dbug_tmp_restore_column_map(aTable->write_set, oldMap);
+}
+
+int PubsubsqlHandler::insertRow(TABLE* aTable, uchar* aBuffer) {
+	char tmpBuffer[1024];
+	String tmpString(tmpBuffer, sizeof(tmpBuffer), &my_charset_bin);
+	//
+	my_ptrdiff_t offset = (my_ptrdiff_t)(aBuffer - aTable->record[0]);
+	my_bitmap_map* oldMap = dbug_tmp_use_all_columns(aTable, aTable->read_set);
+	for (uint i = 0; i < aTable->s->fields; i++) {
+		Field* field = aTable->field[i];
+		if (field->type() == MYSQL_TYPE_VARCHAR) {
+			if (field->is_null()) {
+				mShare->insertRow(nullptr);
+			}
+			else {
+				field->move_field_offset(offset);
+				String* sqlString = field->val_str(&tmpString, &tmpString);
+				const char* str = sqlString->c_ptr();
+				mShare->insertRow(str);
+				field->move_field_offset(-offset);
+			}
+			break; // read first varchar column only
+		}
+	}
+	dbug_tmp_restore_column_map(aTable->read_set, oldMap);
+	//
+	return 0;
 }
 
 //============================================================================

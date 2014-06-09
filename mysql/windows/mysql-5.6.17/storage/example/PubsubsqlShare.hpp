@@ -25,7 +25,7 @@ public: // aux
 
 public: // iface
 
-	int insertRow(uchar* aBuffer);
+	int insertRow(const char* aString);
 	int deleteRow(const uchar* aBuffer);
 
 	static PubsubsqlShare* findOrCreateShare

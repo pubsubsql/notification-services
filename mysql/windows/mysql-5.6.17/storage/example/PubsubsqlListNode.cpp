@@ -6,12 +6,20 @@
 #include "handler.h"                     /* handler */
 #include "my_base.h"                     /* ha_rows */
 
+#include <cstring>
+
 //----------------------------------------------------------------------------
 
-PubsubsqlListNode* newPubsubsqlListNode() {
-	void* node = my_malloc(sizeof(PubsubsqlListNode), MYF(MY_WME));
+PubsubsqlListNode* newPubsubsqlListNode(const char* aString) {
+	//
+	const char* str = (nullptr == aString ? "" : aString);
+	size_t strLen = strlen(str);
+	size_t strSizeB = (strLen + 1) * sizeof(char);
+	//
+	size_t nodeSizeB = sizeof(PubsubsqlListNode) + strSizeB;
+	void* node = my_malloc(nodeSizeB, MYF(MY_WME));
 	if (node) {
-		return new (node)PubsubsqlListNode();
+		return new (node)PubsubsqlListNode(nodeSizeB, str, strLen);
 	}
 	else {
 		return nullptr;
@@ -31,9 +39,12 @@ PubsubsqlListNode::~PubsubsqlListNode() {
 	// void
 }
 
-PubsubsqlListNode::PubsubsqlListNode()
-:	mSizeB(sizeof(PubsubsqlListNode))
+PubsubsqlListNode::PubsubsqlListNode(const size_t aNodeSizeB, const char* aString, const size_t aStringLen)
+:	mSizeB(aNodeSizeB)
+,	mStringLen(aStringLen)
 ,	mNext(nullptr)
 {
-	// void
+	char* dst = static_cast<char*>(getPayload());
+	strncpy(dst, aString, aStringLen);
+	dst[aStringLen] = '\0'; // guard
 }

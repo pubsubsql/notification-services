@@ -2,9 +2,9 @@
 #include "PubsubsqlHandler.hpp"
 #include "ha_pubsubsql.h"
 
-int PubsubsqlShare::insertRow(uchar* aBuffer) {
+int PubsubsqlShare::insertRow(const char* aString) {
 	mysql_mutex_lock(&mMutex);
-	mRows.push();
+	mRows.push(aString);
 	mysql_mutex_unlock(&mMutex);
 	return 0;
 }

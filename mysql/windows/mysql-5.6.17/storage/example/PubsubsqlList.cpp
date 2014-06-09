@@ -10,9 +10,9 @@ size_t PubsubsqlList::getCount() const {
 	return mCount;
 }
 
-void PubsubsqlList::push() {
+void PubsubsqlList::push(const char* aString) {
 	PubsubsqlListNodeSptr newTail =
-		PubsubsqlListNodeSptr(newPubsubsqlListNode(), deletePubsubsqlListNode);
+		PubsubsqlListNodeSptr(newPubsubsqlListNode(aString), deletePubsubsqlListNode);
 	//
 	if (newTail) {
 		if (mTail) {
