@@ -10,3 +10,6 @@ select * from test;
 delete from test;
 select * from test;
 
+update test set c = 'connect:ip:port';
+update test set c = 'disconnect';
+

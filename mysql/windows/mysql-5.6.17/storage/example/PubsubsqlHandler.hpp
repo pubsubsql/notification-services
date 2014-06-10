@@ -50,13 +50,18 @@ public: // iface
 	virtual int info(uint aFlag);
 
 	virtual int write_row(uchar* aBuffer);
+	virtual int update_row(const uchar* aOldData, uchar* aNewData);
 	virtual int delete_row(const uchar* aBuffer);
 
 private: // aux
 
 	void selectRecord(TABLE* aTable, uchar* aBuffer);
 	int insertRecord(TABLE* aTable, uchar* aBuffer);
+	int updateRecord(TABLE* aTable, uchar* aBuffer);
 	int deleteRecord(TABLE* aTable, const uchar* aBuffer);
+	//
+	void updateRecordDefault();
+	void updateRecordCommand(const char* aCommand);
 
 public: // factory
 

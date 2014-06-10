@@ -181,6 +181,11 @@ int PubsubsqlHandler::write_row(uchar* aBuffer) {
 	return insertRecord(table, aBuffer);
 }
 
+int PubsubsqlHandler::update_row(const uchar* aOldData, uchar* aNewData) {
+	mCurrentRow.reset();
+	return updateRecord(table, aNewData);
+}
+
 int PubsubsqlHandler::delete_row(const uchar* aBuffer) {
 	mCurrentRow.reset();
 	return deleteRecord(table, aBuffer);
@@ -243,8 +248,52 @@ int PubsubsqlHandler::insertRecord(TABLE* aTable, uchar* aBuffer) {
 
 //----------------------------------------------------------------------------
 
+int PubsubsqlHandler::updateRecord(TABLE* aTable, uchar* aBuffer) {
+	char tmpBuffer[1024];
+	String tmpString(tmpBuffer, sizeof(tmpBuffer), system_charset_info);
+	//
+	my_ptrdiff_t offset = (my_ptrdiff_t)(aBuffer - aTable->record[0]);
+	my_bitmap_map* oldMap = dbug_tmp_use_all_columns(aTable, aTable->read_set);
+	for (uint i = 0; i < aTable->s->fields; i++) {
+		Field* field = aTable->field[i];
+		if (field->type() == MYSQL_TYPE_VARCHAR) {
+			if (field->is_null()) {
+				updateRecordDefault();
+			}
+			else {
+				field->move_field_offset(offset);
+				String* sqlString = field->val_str(&tmpString , &tmpString);
+				const char* str = sqlString->c_ptr();
+				if (str) {
+					updateRecordCommand(str);
+				}
+				else {
+					updateRecordDefault();
+				}
+				field->move_field_offset(-offset);
+			}
+			break; // read first varchar column only
+		}
+	}
+	dbug_tmp_restore_column_map(aTable->read_set, oldMap);
+	//
+	return 0;
+}
+
+//----------------------------------------------------------------------------
+
 int PubsubsqlHandler::deleteRecord(TABLE* aTable, const uchar* aBuffer) {
 	return mShare->deleteRow(aBuffer);
+}
+
+//============================================================================
+
+void PubsubsqlHandler::updateRecordDefault() {
+	// void
+}
+
+void PubsubsqlHandler::updateRecordCommand(const char* aCommand) {
+	// void
 }
 
 //============================================================================
