@@ -3,6 +3,9 @@
 #include "table.h"
 #include "field.h"
 
+#include <algorithm>
+#include <string>
+
 //============================================================================
 // Three functions below are needed to enable
 // concurrent insert functionality for PUBSUBSQL engine.
@@ -293,6 +296,26 @@ void PubsubsqlHandler::updateRecordDefault() {
 }
 
 void PubsubsqlHandler::updateRecordCommand(const char* aCommand) {
+	std::string cmd = aCommand;
+	std::transform(cmd.begin(), cmd.end(), cmd.begin(), ::toupper);
+	if (0 == cmd.find(COMMAND_CONNECT)) {
+		updateRecordConnect(aCommand);
+	}
+	else if (0 == cmd.find(COMMAND_DISCONNECT)) {
+		updateRecordDisconnect();
+	}
+	else {
+		updateRecordDefault();
+	}
+}
+
+//----------------------------------------------------------------------------
+
+void PubsubsqlHandler::updateRecordConnect(const char* aCommand) {
+	// void
+}
+
+void PubsubsqlHandler::updateRecordDisconnect() {
 	// void
 }
 
@@ -309,6 +332,8 @@ PubsubsqlHandler::PubsubsqlHandler
 )
 :	handler(aPubsubsqlHandlerton, aTableShare)
 ,	DEFAULT_STATS_RECORDS(10)
+,	COMMAND_CONNECT("CONNECT")
+,	COMMAND_DISCONNECT("DISCONNECT")
 {
 	DBUG_ENTER("PubsubsqlHandler::PubsubsqlHandler");
 	DBUG_VOID_RETURN;

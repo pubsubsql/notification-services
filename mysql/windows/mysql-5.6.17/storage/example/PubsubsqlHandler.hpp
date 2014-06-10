@@ -15,6 +15,8 @@ class PubsubsqlHandler : public handler {
 private: // const
 
 	const ulong DEFAULT_STATS_RECORDS;
+	const char* COMMAND_CONNECT;
+	const char* COMMAND_DISCONNECT;
 
 private: // fields
 
@@ -62,6 +64,9 @@ private: // aux
 	//
 	void updateRecordDefault();
 	void updateRecordCommand(const char* aCommand);
+	//
+	void updateRecordConnect(const char* aCommand);
+	void updateRecordDisconnect();
 
 public: // factory
 
