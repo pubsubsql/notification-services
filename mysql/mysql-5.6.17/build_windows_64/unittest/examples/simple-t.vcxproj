@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{48E7D934-D3D5-4D31-97D6-D52301C4642F}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>simple-t</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\unittest\examples\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">simple-t.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">simple-t</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\unittest\examples\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">simple-t.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">simple-t</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\unittest\examples\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">simple-t.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">simple-t</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\unittest\examples\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">simple-t.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">simple-t</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\zlib;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\regex;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\extra\yassl\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\mytap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4805;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;ENABLED_DEBUG_SYNC;_WINDOWS;__WIN__;_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0501;WIN32_LEAN_AND_MEAN;_WIN64;HAVE_CONFIG_H;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;ENABLED_DEBUG_SYNC;_WINDOWS;__WIN__;_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0501;WIN32_LEAN_AND_MEAN;_WIN64;HAVE_CONFIG_H;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\zlib;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\regex;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\extra\yassl\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\mytap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\zlib;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\regex;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\extra\yassl\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\mytap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ws2_32.lib;..\mytap\Debug\mytap.lib;..\..\mysys\Debug\mysys.lib;..\..\dbug\Debug\dbug.lib;..\..\mysys\Debug\mysys.lib;..\..\dbug\Debug\dbug.lib;..\..\strings\Debug\strings.lib;..\..\zlib\Debug\zlib.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/Debug/simple-t.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/Debug/simple-t.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\zlib;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\regex;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\extra\yassl\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\mytap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4805;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DBUG_OFF;_WINDOWS;__WIN__;_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0501;WIN32_LEAN_AND_MEAN;_WIN64;HAVE_CONFIG_H;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DBUG_OFF;_WINDOWS;__WIN__;_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0501;WIN32_LEAN_AND_MEAN;_WIN64;HAVE_CONFIG_H;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\zlib;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\regex;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\extra\yassl\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\mytap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\zlib;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\regex;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\extra\yassl\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\mytap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ws2_32.lib;..\mytap\Release\mytap.lib;..\..\mysys\Release\mysys.lib;..\..\dbug\Release\dbug.lib;..\..\mysys\Release\mysys.lib;..\..\dbug\Release\dbug.lib;..\..\strings\Release\strings.lib;..\..\zlib\Release\zlib.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/Release/simple-t.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/Release/simple-t.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\zlib;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\regex;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\extra\yassl\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\mytap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4800;4805;4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DBUG_OFF;_WINDOWS;__WIN__;_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0501;WIN32_LEAN_AND_MEAN;_WIN64;HAVE_CONFIG_H;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DBUG_OFF;_WINDOWS;__WIN__;_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0501;WIN32_LEAN_AND_MEAN;_WIN64;HAVE_CONFIG_H;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\zlib;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\regex;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\extra\yassl\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\mytap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\zlib;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\regex;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\extra\yassl\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\mytap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ws2_32.lib;..\mytap\MinSizeRel\mytap.lib;..\..\mysys\MinSizeRel\mysys.lib;..\..\dbug\MinSizeRel\dbug.lib;..\..\mysys\MinSizeRel\mysys.lib;..\..\dbug\MinSizeRel\dbug.lib;..\..\strings\MinSizeRel\strings.lib;..\..\zlib\MinSizeRel\zlib.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/MinSizeRel/simple-t.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/MinSizeRel/simple-t.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\zlib;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\regex;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\extra\yassl\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\mytap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4805;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DBUG_OFF;_WINDOWS;__WIN__;_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0501;WIN32_LEAN_AND_MEAN;_WIN64;HAVE_CONFIG_H;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DBUG_OFF;_WINDOWS;__WIN__;_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0501;WIN32_LEAN_AND_MEAN;_WIN64;HAVE_CONFIG_H;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\zlib;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\regex;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\extra\yassl\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\mytap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\zlib;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\regex;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\extra\yassl\include;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\mytap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;ws2_32.lib;..\mytap\RelWithDebInfo\mytap.lib;..\..\mysys\RelWithDebInfo\mysys.lib;..\..\dbug\RelWithDebInfo\dbug.lib;..\..\mysys\RelWithDebInfo\mysys.lib;..\..\dbug\RelWithDebInfo\dbug.lib;..\..\strings\RelWithDebInfo\strings.lib;..\..\zlib\RelWithDebInfo\zlib.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/RelWithDebInfo/simple-t.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/RelWithDebInfo/simple-t.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\unittest\examples\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/unittest/examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17 -BC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64 --check-stamp-file C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\unittest\examples\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/unittest/examples/CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\examples\CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\examples\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\unittest\examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/unittest/examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17 -BC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64 --check-stamp-file C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\unittest\examples\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/unittest/examples/CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\examples\CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\examples\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\unittest\examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/unittest/examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17 -BC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64 --check-stamp-file C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\unittest\examples\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/unittest/examples/CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\examples\CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\examples\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\unittest\examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/unittest/examples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17 -BC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64 --check-stamp-file C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\unittest\examples\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/unittest/examples/CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\examples\CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\unittest\examples\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\unittest\examples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\unittest\examples\simple-t.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/ZERO_CHECK.vcxproj">
+      <Project>1EE29032-D526-4048-A918-F2D193C31F64</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/dbug/dbug.vcxproj">
+      <Project>E82D6A24-3E0C-4E63-B920-E420B03B7CC0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/mytap/mytap.vcxproj">
+      <Project>1A8BA674-2198-4EC5-85B4-B8932CEC384A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/strings/strings.vcxproj">
+      <Project>CF368281-B6CE-4E32-A159-808F3C37242A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/zlib/zlib.vcxproj">
+      <Project>4B335DD5-397E-4E8A-95BD-67E6F359BFE5</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

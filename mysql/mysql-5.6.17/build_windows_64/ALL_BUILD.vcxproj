@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{3C0123DB-02EB-4C81-94C6-D08211830B4E}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17 -BC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64 --check-stamp-file C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\os\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckStructHasMember.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\os\WindowsCache.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\build_configurations\compiler_options.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\build_configurations\feature_set.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\maintainer.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\character_sets.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cpu_info.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\zlib.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\libevent.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\ssl.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\readline.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\mysql_version.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\VERSION;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\package_name.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cpack_source_ignore_files.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\versioninfo.rc.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\versioninfo.rc.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\libutils.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\dtrace.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\plugin.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\install_macros.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\install_layout.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\mysql_add_executable.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\configure.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckStructHasMember.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\abi_check.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\tags.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\config.h.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\config.h.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include\mysql_version.h.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql\sql_builtin.cc.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\info_macros.cmake.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\info_macros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17 -BC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64 --check-stamp-file C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\os\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckStructHasMember.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\os\WindowsCache.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\build_configurations\compiler_options.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\build_configurations\feature_set.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\maintainer.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\character_sets.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cpu_info.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\zlib.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\libevent.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\ssl.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\readline.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\mysql_version.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\VERSION;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\package_name.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cpack_source_ignore_files.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\versioninfo.rc.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\versioninfo.rc.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\libutils.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\dtrace.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\plugin.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\install_macros.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\install_layout.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\mysql_add_executable.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\configure.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckStructHasMember.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\abi_check.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\tags.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\config.h.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\config.h.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include\mysql_version.h.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql\sql_builtin.cc.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\info_macros.cmake.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\info_macros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17 -BC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64 --check-stamp-file C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\os\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckStructHasMember.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\os\WindowsCache.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\build_configurations\compiler_options.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\build_configurations\feature_set.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\maintainer.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\character_sets.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cpu_info.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\zlib.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\libevent.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\ssl.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\readline.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\mysql_version.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\VERSION;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\package_name.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cpack_source_ignore_files.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\versioninfo.rc.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\versioninfo.rc.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\libutils.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\dtrace.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\plugin.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\install_macros.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\install_layout.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\mysql_add_executable.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\configure.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckStructHasMember.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\abi_check.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\tags.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\config.h.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\config.h.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include\mysql_version.h.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql\sql_builtin.cc.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\info_macros.cmake.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\info_macros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17 -BC:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64 --check-stamp-file C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\CMakeLists.txt;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\os\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckStructHasMember.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\os\WindowsCache.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\build_configurations\compiler_options.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\build_configurations\feature_set.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\maintainer.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\character_sets.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cpu_info.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\zlib.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\libevent.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\ssl.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\readline.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\mysql_version.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\VERSION;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\package_name.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cpack_source_ignore_files.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\versioninfo.rc.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\versioninfo.rc.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\libutils.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\dtrace.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\plugin.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\install_macros.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\install_layout.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\mysql_add_executable.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\cmake_parse_arguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\configure.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckStructHasMember.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\abi_check.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\tags.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\config.h.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\config.h.cmake;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\include\mysql_version.h.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\sql\sql_builtin.cc.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\cmake\info_macros.cmake.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\info_macros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\bb2ca075915d380d82117c17bdb9d295\ALL_BUILD.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/CMakeFiles/bb2ca075915d380d82117c17bdb9d295/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\ALL_BUILD</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/CMakeFiles/bb2ca075915d380d82117c17bdb9d295/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\ALL_BUILD</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/CMakeFiles/bb2ca075915d380d82117c17bdb9d295/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\ALL_BUILD</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/CMakeFiles/bb2ca075915d380d82117c17bdb9d295/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\home\workspace\go\src\github.com\notification-services\mysql\windows\mysql-5.6.17\build_windows_64\CMakeFiles\ALL_BUILD</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\ALL_BUILD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/extra/GenError.vcxproj">
+      <Project>BC9CFFDC-E23E-4A96-B68D-FC5876602C3F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/scripts/GenFixPrivs.vcxproj">
+      <Project>0DED5BAD-57A0-472D-AE30-E95E04A39BEB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/INFO_BIN.vcxproj">
+      <Project>482652FF-B916-4675-AB1B-3EB6B76C9947</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/INFO_SRC.vcxproj">
+      <Project>DE1992D4-CCC1-41C1-8C37-DA773B63A455</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/ZERO_CHECK.vcxproj">
+      <Project>1EE29032-D526-4048-A918-F2D193C31F64</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/archive/archive.vcxproj">
+      <Project>B07AA3A0-3C74-4293-86C5-90D7A9C08847</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/plugin/audit_null/audit_null.vcxproj">
+      <Project>88E0E158-F5C6-410A-9FAC-E570A65AC3DB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/plugin/auth/auth.vcxproj">
+      <Project>F3E66A8F-9687-4691-93FF-B3FC5A7E6E69</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/plugin/auth/auth_test_plugin.vcxproj">
+      <Project>344A2277-923A-490B-B25E-80A30BA59254</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/libmysql/authentication_win/auth_win_client.vcxproj">
+      <Project>757C1ED8-419F-4415-8718-9D89CD0BE617</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/mytap/t/basic-t.vcxproj">
+      <Project>5BE505EA-7249-42B0-8ED2-6C532F66D06C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/binlog.vcxproj">
+      <Project>11DB3802-6AE9-48CF-B4A9-355C068012B5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/blackhole/blackhole.vcxproj">
+      <Project>F0B02050-81B3-4298-84C4-81F3A47A3CD4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/tests/bug25714.vcxproj">
+      <Project>43B61D2C-6C1D-42D3-B42D-9EC58DCF9B28</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/libmysql/clientlib.vcxproj">
+      <Project>2380465A-0C10-44CD-BFAE-1D3B9498E69D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/extra/comp_err.vcxproj">
+      <Project>73968ECF-F267-42E6-A7FA-C9C9C3F6D61E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/scripts/comp_sql.vcxproj">
+      <Project>A0C626B5-2454-4B80-BFBA-7C4036D99596</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/csv/csv.vcxproj">
+      <Project>83E47ED5-609A-44BC-BD8A-B969C863A51E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/plugin/daemon_example/daemon_example.vcxproj">
+      <Project>26E6ADA1-93E4-4DC8-9ADA-CA64B7DA2D50</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/dbug/dbug.vcxproj">
+      <Project>E82D6A24-3E0C-4E63-B920-E420B03B7CC0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/echo.vcxproj">
+      <Project>534E6813-0891-4D6D-824B-1489BF40945B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/example/example.vcxproj">
+      <Project>AA7C9FBC-6B82-474D-8A13-D201931C65AD</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/federated/federated.vcxproj">
+      <Project>168983A3-1DB3-4875-82C8-8DFB2993D4A7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/plugin/fulltext/ftexample.vcxproj">
+      <Project>8C298B64-372B-4B77-90DF-B450168ED929</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/gen_lex_hash.vcxproj">
+      <Project>0C046135-F88E-447E-B3F1-26862921A984</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/perfschema/gen_pfs_lex_token.vcxproj">
+      <Project>60179763-FDA7-4B20-AECF-F672F3742BA4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/heap/heap.vcxproj">
+      <Project>95F91E2D-F081-4BBC-9D98-38A5E23DCE0D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/heap/heap_embedded.vcxproj">
+      <Project>24794313-516C-412C-A955-797CBD6F7B0A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/heap/hp_test1.vcxproj">
+      <Project>61C603C3-8031-4D29-B75F-437C65B50073</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/heap/hp_test2.vcxproj">
+      <Project>FA344002-0367-41B9-90EE-2C1A892AE876</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/initial_database.vcxproj">
+      <Project>2516A85D-68CE-4939-B5E6-2C64B3050F38</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/innobase/innobase.vcxproj">
+      <Project>57EE456A-B55B-4305-812E-D92F34DD4599</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/extra/innochecksum.vcxproj">
+      <Project>902EFE15-4671-40AB-AF62-878657006772</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/libmysql/libmysql.vcxproj">
+      <Project>3375FEE4-A74F-4EAE-AA19-4DEFA2305E6C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/libmysqld/libmysqld.vcxproj">
+      <Project>FA8BEDB7-E913-45B8-BBB8-558919E91303</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/master.vcxproj">
+      <Project>C74E15AE-21DF-4B9B-9DD8-772AE0A63AA4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/extra/my_print_defaults.vcxproj">
+      <Project>1632975D-51F0-4CE4-B723-851EF90F5E1F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/mysql-test/lib/My/SafeProcess/my_safe_kill.vcxproj">
+      <Project>8E61EC7C-22BA-40B0-BCD8-0B0BD772C6E8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/mysql-test/lib/My/SafeProcess/my_safe_process.vcxproj">
+      <Project>9AB3153E-BB91-4C80-BC95-53B2BE1FEA8A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/myisam/myisam.vcxproj">
+      <Project>60A6B06E-92D3-4BF5-B407-742D49D527EA</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/myisam/myisam_embedded.vcxproj">
+      <Project>2810BDF5-F48D-4481-9AA2-F6134AED6310</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/myisam/myisam_ftdump.vcxproj">
+      <Project>A1AC755D-09FF-47F8-A2F9-B00B443C3203</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/myisam/myisamchk.vcxproj">
+      <Project>D8835A05-C432-4D37-90A0-73AAB90C5899</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/myisam/myisamlog.vcxproj">
+      <Project>23FEA8DB-86C2-4802-B5B6-8242D2F912A3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/myisammrg/myisammrg.vcxproj">
+      <Project>3207CF4A-37C4-4C7A-9E76-02AD579D40B6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/myisammrg/myisammrg_embedded.vcxproj">
+      <Project>47E1BF18-6681-486D-B615-F1808E7DEAF6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/myisam/myisampack.vcxproj">
+      <Project>E39EF1CA-BB50-45C3-9FD2-94BE06CCED5A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/mysql.vcxproj">
+      <Project>F20927A6-3688-4DCA-877E-9E5B26CFFFCC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/tests/mysql_client_test.vcxproj">
+      <Project>E5190A31-CAEF-4F5C-8972-41E284FDFE7F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/libmysqld/examples/mysql_client_test_embedded.vcxproj">
+      <Project>DC779347-A60A-4DDD-98F2-EFC223728E07</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/mysql_config_editor.vcxproj">
+      <Project>52DB18A4-EE0B-4DC4-A07F-7A513F88DD8C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/libmysqld/examples/mysql_embedded.vcxproj">
+      <Project>81337673-F309-4F55-89F4-846E01E09011</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/mysql_plugin.vcxproj">
+      <Project>1E064D7C-4E42-4C41-A44D-A6AE2FDA6FC5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/mysql_tzinfo_to_sql.vcxproj">
+      <Project>47DE1006-CDB9-4C9C-8212-328864E6D24B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/mysql_upgrade.vcxproj">
+      <Project>DBBC4BF9-1DCB-4D36-ABF3-09320450FC92</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/mysqladmin.vcxproj">
+      <Project>3342B436-C90F-4155-BCE7-ADEC4A1BB48F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/mysqlbinlog.vcxproj">
+      <Project>A34B0AE5-D99D-449E-9E99-7EDEF964259E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/mysqlcheck.vcxproj">
+      <Project>2B0F1749-1E98-4F91-BA11-A763B98E6946</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/libmysql/mysqlclient.vcxproj">
+      <Project>1A859F84-69B3-431C-B0E4-7C8D9EAFACAF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/mysqld.vcxproj">
+      <Project>E3CF1541-6658-48F5-ADA6-1E3CD990F264</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/mysqldump.vcxproj">
+      <Project>BDE488FC-C10E-4165-83E5-0305C4D35326</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/mysqlimport.vcxproj">
+      <Project>6E4FB7FB-5709-4BD5-9B2B-3C4489F1F654</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/libmysqld/mysqlserver.vcxproj">
+      <Project>0657E23E-79C1-4474-89F8-F2AFB828DA5E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/libservices/mysqlservices.vcxproj">
+      <Project>D4C2DAD5-A3C1-452B-965E-7EDC2FEA58A8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/mysqlshow.vcxproj">
+      <Project>15B3462A-F845-4640-928C-021CBC5AE05A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/mysqlslap.vcxproj">
+      <Project>6F61EB73-E6CE-4630-B8ED-7BAD4A63F12B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/client/mysqltest.vcxproj">
+      <Project>60CAB7B6-F915-42A5-AB1E-B1F8946E869C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/libmysqld/examples/mysqltest_embedded.vcxproj">
+      <Project>542F34E3-C3A7-42D7-8B2C-2C338B2F273E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/mysys_ssl/mysys_ssl.vcxproj">
+      <Project>06AFD61D-C671-4A4D-84A6-E4DC4F984CE7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/mytap/mytap.vcxproj">
+      <Project>1A8BA674-2198-4EC5-85B4-B8932CEC384A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/no_plan-t.vcxproj">
+      <Project>C4605549-B7DF-4D54-8E04-EC23A73BF9DE</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/partition.vcxproj">
+      <Project>54F89173-E0AA-4804-8580-C7BC6A6E9E29</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/partition_embedded.vcxproj">
+      <Project>180C2178-8614-4371-8C42-ED6D8BBAB8D3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/perfschema/perfschema.vcxproj">
+      <Project>08D152FB-A080-4124-8C51-59DABEFCDA35</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/extra/perror.vcxproj">
+      <Project>4B41A382-3CEF-44CF-930A-011F96DDE23D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/perfschema/unittest/pfs-t.vcxproj">
+      <Project>89C5814B-3F70-4C89-8A3F-EB5A4A42B2CB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/perfschema/unittest/pfs_account-oom-t.vcxproj">
+      <Project>3C31274F-0B18-4C3B-B06B-BAD2C1D232A6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/perfschema/unittest/pfs_connect_attr-t.vcxproj">
+      <Project>0E2AD502-154A-4EEF-89DC-6467FDC18468</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/perfschema/unittest/pfs_host-oom-t.vcxproj">
+      <Project>33382B82-0E92-4D77-9028-1A3BF6A55AAF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/perfschema/unittest/pfs_instr-oom-t.vcxproj">
+      <Project>CCEEEF9E-4426-475A-8378-9C3AEF7EC3CC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/perfschema/unittest/pfs_instr-t.vcxproj">
+      <Project>8CFAA714-7812-4E98-987F-1F308DD1D415</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/perfschema/unittest/pfs_instr_class-oom-t.vcxproj">
+      <Project>487A8EA4-CF60-4EB9-AAB2-3895E8D0D469</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/perfschema/unittest/pfs_instr_class-t.vcxproj">
+      <Project>67E632E5-E38D-4B63-9276-AE557001E2A4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/storage/perfschema/unittest/pfs_user-oom-t.vcxproj">
+      <Project>2DF1D07B-F457-4E8E-903E-383AF8DD318F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/plugin/auth/qa_auth_client.vcxproj">
+      <Project>674AD2A1-4AD6-43BE-A1B1-5F663739E687</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/plugin/auth/qa_auth_interface.vcxproj">
+      <Project>2A3701E8-9D6A-4BE6-BA3D-3EBBF25AD854</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/plugin/auth/qa_auth_server.vcxproj">
+      <Project>7BF6E315-DE91-45A1-9B61-630C7349C858</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/mysys/queues.vcxproj">
+      <Project>3D5CE156-C943-4130-85B1-FC6F75EBC842</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/regex/re.vcxproj">
+      <Project>149B8161-A604-42EE-9ECF-4432B796DAC7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/regex/regex.vcxproj">
+      <Project>775548DD-0BD2-4F9D-877F-FFBC2E9AF1B0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/extra/replace.vcxproj">
+      <Project>8441077F-44D2-4095-AD29-456ECBF0714A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/extra/resolveip.vcxproj">
+      <Project>49C27693-21B6-4C32-A695-7F3D7A7EDA29</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/rpl.vcxproj">
+      <Project>24547C10-8F67-498B-94DF-FA935A9AC7CA</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/plugin/semisync/semisync_master.vcxproj">
+      <Project>B37EE934-0C3C-4380-A4F9-CA3BC7FFF457</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/plugin/semisync/semisync_slave.vcxproj">
+      <Project>6124A134-F74D-4D0B-8BA5-34D875757179</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/simple-t.vcxproj">
+      <Project>48E7D934-D3D5-4D31-97D6-D52301C4642F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/skip-t.vcxproj">
+      <Project>D26EFEAF-1446-45B1-A408-392752C950A3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/skip_all-t.vcxproj">
+      <Project>DB2EADD7-1C58-427D-9011-AAF040FB4056</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/slave.vcxproj">
+      <Project>DB3A75C4-4EFD-402B-B7A7-C1516C2EF7A3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/sql.vcxproj">
+      <Project>4453A399-9268-4B6E-9CBA-26F633D36BC6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/libmysqld/sql_embedded.vcxproj">
+      <Project>95D078CA-7010-470A-A1E7-D532C1E04548</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/sqlgunitlib.vcxproj">
+      <Project>2A2E04F5-6226-41DB-AC1E-925A59C9F62E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/strings/strings.vcxproj">
+      <Project>CF368281-B6CE-4E32-A159-808F3C37242A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/extra/yassl/taocrypt/taocrypt.vcxproj">
+      <Project>909FC45A-D7D4-4872-98B1-6820487C92ED</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/mysys/thr_lock.vcxproj">
+      <Project>82C3E307-D7BB-4D7E-B896-2F0FFE7FBAB3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/unittest/examples/todo-t.vcxproj">
+      <Project>A6A9DE7A-577A-43EA-9163-1C77FF4E1107</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/sql/udf_example.vcxproj">
+      <Project>3514DE26-7672-45C3-B381-7C45A12370BF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/plugin/password_validation/validate_password.vcxproj">
+      <Project>F4298610-0C5A-42DF-9E6F-63B24CCBCB6B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/vio/vio.vcxproj">
+      <Project>0DA9C773-F937-4709-B94D-B4EFD3AF5329</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/extra/yassl/yassl.vcxproj">
+      <Project>F0B41BE9-CAAA-4605-91FB-2DFF4A9EE0E6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/home/workspace/go/src/github.com/notification-services/mysql/windows/mysql-5.6.17/build_windows_64/zlib/zlib.vcxproj">
+      <Project>4B335DD5-397E-4E8A-95BD-67E6F359BFE5</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
