@@ -1,7 +1,0 @@
-USE ndbinfo;
-select count(*) from blocks;
-count(*)
-21
-select count(*) from blocks;
-count(*)
-21
